@@ -1,0 +1,39 @@
+<IfModule mod_rewrite.c>
+IndexIgnore *
+Options +FollowSymLinks -MultiViews
+
+# apache rewrite rules
+RewriteEngine On
+# RewriteBase /
+
+#redirect /file.html to /file
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NE,L,R]
+
+# Internally map /file to/ file.html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)/?$ $1.html [L]
+
+#redirect /file.php to /file
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NE,L,R]
+
+# Internally map /file to/ file.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)/?$ $1.php [L]
+
+# error redirect
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 405 /error.php
+ErrorDocument 408 /error.php
+ErrorDocument 500 /error.php
+ErrorDocument 502 /error.php
+ErrorDocument 504 /error.php
+</IfModule>
+
+# Prevent Apache from serving .htaccess files:
+<FilesMatch "^\.htaccess">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,103 @@
+#form {
+    position: relative;
+    background-color: rgb(205, 184, 125);
+    border-radius: 0.75rem;
+    width: 70vw;
+    height: 50vh;
+    min-width: 15rem;
+    max-width: 35rem;
+    padding: 2rem 2rem 4rem;
+    top: 8vh;
+    margin: auto;
+}
+
+.question {
+    display: none;
+}
+
+.qTitle {
+    margin: 0;
+}
+
+#error {
+    visibility: hidden;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+}
+
+#buttonPane {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+button {
+    background-color: rgb(76, 175, 80);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#previousButton {
+    background-color: rgb(187, 187, 187);
+    display: inline-block;
+}
+
+#nextButton {
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 640px) {
+    #pageName {
+        visibility: hidden;
+    }
+    #centerBox {
+        all: initial;
+    }
+    #center {
+        all: initial;
+    }
+    #courseName {
+        top: 11vh;
+        margin: 0.5rem 0 0;
+        font-size: 3.5vh;
+    }
+    #name {
+        margin: 0.5rem 0.5rem;
+        font-size: 2vh;
+        position: absolute;
+        top: 0%;
+    }
+    #rightBox {
+        margin: 0.5rem 0.5rem;
+    }
+
+    #form {
+        width: 80vw;
+        height: 67vh;
+        top: 2vh;
+        min-width: 15rem;
+        padding: 1rem 1rem 3rem;
+    }
+    .qTitle {
+        font-size: 1.1rem;
+    }
+    #error {
+        bottom: 3rem;
+        left: 1rem;
+    }
+    #buttonPane {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}

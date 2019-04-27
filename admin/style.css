@@ -1,0 +1,347 @@
+.headPanel {
+    height: 10vh;
+}
+
+#pageName {
+    top: 3.25vh;
+    margin: 0 0 0 0.5vh;
+    font-size: 3.5vh;
+}
+#right {
+    font-size: 2vh;
+}
+
+.bodyPanel {
+    top: 10vh;
+}
+
+.navBar {
+    border-top: 2px solid rgb(11, 12, 18);
+    background-color: rgb(42, 44, 67);
+    text-align: center;
+}
+
+.tabs {
+    background-color: inherit;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.tabs:active{
+    color: rgb(251, 200, 57);
+}
+
+#evalsTab, #previousTab, #trendsTab {
+    visibility: hidden;
+}
+
+.bodyBox {
+    position: absolute;
+    border-style: solid;
+    border-width: 1.5px;
+    width: 90vw;
+    height: 80vh;
+    min-height: 500px;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 0 0;
+    background-color: rgb(42, 44, 67);
+}
+
+#currentSemester {
+    position: relative;
+    height: 8%;
+}
+
+#csWord, #csYear {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.gridPanel {
+    position: absolute;
+    width: 90%;
+    height: 78%;
+    top: 10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 450px;
+    grid-auto-flow: dense;
+}
+
+.classTitles {
+    color: rgb(255, 255, 255);
+    position: relative;
+    height: 2.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gridBox {
+    position: relative;
+    height: 400px;
+    background-color: rgb(235, 235, 235);
+    border-style: solid;
+    border-width: 1.5px;
+    margin: auto;
+}
+
+.gridBoxTop {
+    position: relative;
+    text-align: center;
+    height: 13%;
+    padding: 1vh 0 0 0;
+}
+
+.evalButton {
+    width: 70%;
+}
+
+.gridBoxCenter {
+    height: 74%;
+    position: relative;
+    overflow: auto;
+    padding: 0.2rem;
+}
+#centerLeft {
+    float: left;
+    width: 87%;
+}
+#centerRight {
+    float: right;
+    width: 13%;
+}
+#evalList, #evalCount {
+    list-style-type:none;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 1vh;
+}
+
+.gridBoxBottom {
+    height: 10%;
+    padding: 3% 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+#buttonPane {
+    position: absolute;
+    bottom: 2vh;
+    right: 6vw;
+}
+
+button {
+    background-color: rgb(251, 200, 57);
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#evalsTabTitle {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 8%;
+}
+
+#evalsTabBody {
+    top: 18%;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.evalsBox {
+    border: 1.5px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 10rem;
+    max-width: 50rem;
+    margin: 0 auto 1rem;
+    left: 0;
+    right: 0;
+    background-color: rgb(235, 235, 235);
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.evalsBoxLeft {
+    float: left;
+    width: 75%;
+    height: 100%;
+}
+
+.evalInfo {
+    margin: 0 0 1rem;
+}
+
+.evalSub, .evalSubData, .evalDate, .evalDateData, .evalResponse, .evalResponseData, .evalEnd, .evalEndData {
+    display: inline;
+}
+
+.evalsBoxRight {
+    float: right;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+#newEvalCode {
+    margin: 1rem 0 0.5rem;
+}
+
+.newEvalCodeBox {
+    border: 1.5px solid black;
+    width: 90%;
+    height: 30%;
+    margin: 0 auto 1rem;
+}
+
+.newEvalCodeData {
+    margin: 0;
+    line-height: 3rem;
+}
+
+.stopEval {
+    padding: 0;
+    font-size: 0.9rem;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 90%;
+    height: 25%;
+    background-color: rgb(255, 0, 0);
+}
+
+.stopEval:disabled {
+    background-color: rgb(192, 192, 192);
+
+}
+
+.previousBox{
+    width: 96%;
+    height: 100%;
+    margin: auto; 
+    overflow: auto;
+}
+
+#previousSemester {
+    height: 7%;
+}
+
+#psWord, #psYear {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.previousGridPanel {
+    margin: auto auto 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 310px;
+    grid-auto-flow: dense;
+}
+
+
+.previousGridBox {
+    position: relative;
+    height: 260px;
+    background-color: rgb(235, 235, 235);
+    border-style: solid;
+    border-width: 1.5px;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+}
+
+.previousGridBoxCenter {
+    padding: 0.2rem;
+}
+
+.trendsBox{
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; 
+    overflow: auto;
+    text-align: center;
+}
+
+.trendsSubject {
+    color: white;
+}
+
+.trendsInfo {
+    color: white;
+}
+
+.graphs {
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 640px) {
+    #logoBox {
+        width: 13vh;
+        height: 6vh;
+        top: 1vh;
+        margin: auto 0.5rem;
+    }
+    .logo {
+        width: 6vh;
+        height: 6vh;
+    }
+    #pageName {
+        display: inline;
+        top: 1.75vh;
+        margin: 0 0 0 0.5vh;
+        font-size: 2.5vh;
+    }
+
+    
+    #rightText {
+        top: 3vh;
+        font-size: 2vh;
+    }
+}
+
+
+
+

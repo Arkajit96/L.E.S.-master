@@ -1,0 +1,61 @@
+<?php
+session_start();
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+} else {
+    header("Location: ../homepage/login");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>form</title>
+        <link rel="stylesheet" href="../globalStyle.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="popPanel">
+            <div id="popup">
+                <p class="warning">This survey consists of 6 short questions. Your honest feedback is highly valued!</p>
+                <p class="warning">But first, since this survey is about your class experience, only proceed if you were in class today?</p>
+                <p class="warning">(Be honest; there is no penalty for saying no).</p>
+                <div id="buttonPane">
+                    <button type="button" id="popupButton" onclick="agreePopup(0), unblur(0)">Agree</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="blur">
+            <div class="headPanel">
+                <div id="logoBox">
+                    <img class="logo" src="../source/logo.png" alt="university_of_pittsburgh_logo">
+                    <h1 id="pageName">L.E.S.</h1>
+                </div>
+                <div id="centerBox">
+                    <div id="center">
+                        <h2 id="courseName">{@courseName}</h2>
+                        <h2 id="name">{@instructorName}</h2>
+                    </div>
+                </div>
+                <div id="rightBox">
+                    <div id="right">
+                        <h5 id="rightText">{@date}</h5>                        
+                    </div>
+                </div>
+            </div>
+            <div class="bodyPanel">
+                <form id="form" action="submission" method="POST">
+                    <input id="qCount" name="qCount" type="hidden" value="">
+{@questions}
+                    <p id="error">(Please select an option!)</p>
+                    <div id="buttonPane">
+                        <button type="button" id="previousButton" onclick="pageChange(-1)" disabled>Previous</button>
+                        <button type="button" id="nextButton" onclick="pageChange(1)" disabled>Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

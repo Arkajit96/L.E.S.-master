@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>form</title>
+        <link rel="stylesheet" href="../globalStyle.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="popPanel">
+            <div id="popup">
+                <h2 class="newEval">New Evaluation for LSAP 3540</h2>
+                <h3 class="newEvalDate">Conducted: 04/15/2019</h3>
+                <div class="newEvalInfo">
+                    <h3 id="newEvalCode">Survey Code:</h3>
+
+                    <h3 id="newEvalCount">Responses:</h3>
+                </div>
+                <button type="button" class="cancelEval" id="lsap_3540" onclick="">Cancel Ealuation</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="blur">
+            <div class="headPanel">
+                <div id="logoBox">
+                    <img class="logo" src="../source/logo.png" alt="university_of_pittsburgh_logo">
+                    <h1 id="pageName">L.E.S.</h1>
+                </div>
+                <div id="centerBox">
+                    <div id="center">
+                        <h2 id="greet">Welcome!</h3>
+                        <h2 id="name">Christian Schunn</h3>
+                    </div>
+                </div>
+                <div id="rightBox">
+                    <div id="right">
+                        <h4 id="rightText"><u>LOGOUT</u></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyPanel">
+                <div class="bodyBox">
+                    <div id="currentSemester">
+                        <h2 id="csWord">Current Semester: 2019 (2191)</h2>
+                    </div>
+                    <div class="gridPanel">
+                        <div class="grid">
+                            <div class="classTitles">
+                                <div>LSAP 3540</div>
+                                <div>Design of Educational Systems</div>
+                            </div>
+                            <div class="gridBox">
+                                <div class="gridBoxTop">
+                                    <button type="button" class="evalButton" id="infsci_2750" onclick="showPopup(1), createNew(1)">New Ealuation</button>
+                                </div>
+                                <div class="gridBoxCenter">
+                                    <div id="centerLeft">
+                                        <ul id="evalList">
+                                            <li>Evaluation 4 - 02/08/2019</li>
+                                            <li>Evaluation 3 - 02/01/2019</li>
+                                            <li>Evaluation 2 - 01/25/2019</li>
+                                            <li>Evaluation 1 - 01/18/2019</li>
+                                            <li>Evaluation 4 - 02/08/2019</li>
+                                            <li>Evaluation 3 - 02/01/2019</li>
+                                        </ul>
+                                    </div>
+                                    <div id="centerRight">
+                                        <ul id="evalCount">
+                                            <li>10</li>
+                                            <li>05</li>
+                                            <li>21</li>
+                                            <li>16</li>
+                                            <li>63</li>
+                                            <li>0</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="gridBoxBottom">
+                                    <a class="trendsLink" href="">Trends Over Time</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="classTitles">
+                                <div>PSY 0010</div>
+                                <div>Introduction to Psychology</div>
+                            </div>
+                            <div class="gridBox">
+                                <div class="gridBoxTop">
+                                    <button type="button" class="evalButton" id="infsci_2750" onclick="showPopup(1), createNew(1)">New
+                                        Ealuation</button>
+                                </div>
+                                <div class="gridBoxCenter">
+                                    <div id="centerLeft">
+                                        <ul id="evalList">
+                                            <li>Evaluation 3 - 02/12/2019</li>
+                                            <li>Evaluation 2 - 02/05/2019</li>
+                                            <li>Evaluation 1 - 01/29/2019</li>
+                                            <li>Evaluation 4 - 01/22/2019</li>
+                                            <li>Evaluation 3 - 01/15/2019</li>
+                                        </ul>
+                                    </div>
+                                    <div id="centerRight">
+                                        <ul id="evalCount">
+                                            <li>23</li>
+                                            <li>21</li>
+                                            <li>22</li>
+                                            <li>23</li>
+                                            <li>21</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="gridBoxBottom">
+                                    <a class="trendsLink" href="">Trends Over Time</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="classTitles">
+                                <div>PSY 0422</div>
+                                <div>Cognitive Psychology</div>
+                            </div>
+                            <div class="gridBox">
+                                <div class="gridBoxTop">
+                                    <button type="button" class="evalButton" id="infsci_2750" onclick="showPopup(1), createNew(1)">New
+                                        Ealuation</button>
+                                </div>
+                                <div class="gridBoxCenter">
+                                    <div id="centerLeft">
+                                        <ul id="evalList">
+                                            <li>Evaluation 3 - 02/07/2019</li>
+                                            <li>Evaluation 2 - 01/31/2019</li>
+                                            <li>Evaluation 1 - 01/24/2019</li>
+                                            <li>Evaluation 4 - 01/17/2019</li>
+                                            <li>Evaluation 3 - 01/10/2019</li>
+                                        </ul>
+                                    </div>
+                                    <div id="centerRight">
+                                        <ul id="evalCount">
+                                            <li>40</li>
+                                            <li>39</li>
+                                            <li>40</li>
+                                            <li>40</li>
+                                            <li>40</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="gridBoxBottom">
+                                    <a class="trendsLink" href="">Trends Over Time</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="classTitles">
+                                <div>INFSCI 2345</div>
+                                <div>testing123</div>
+                            </div>
+                            <div class="gridBox">
+                                <div class="gridBoxTop">
+                            
+                                </div>
+                                <div class="gridBoxCenter">
+                            
+                                </div>
+                                <div class="gridBoxBottom">
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div id="buttonPane">
+                            <button type="button" id="addNewCourse" onclick="">Add New Course</button>
+                            <button type="button" id="preSemester" onclick="">Previous Semester</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
